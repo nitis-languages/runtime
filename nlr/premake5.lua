@@ -1,36 +1,26 @@
-project "NiTiSLanguagesRuntime"
-    kind "StaticLib"
+project "nlr"
+    kind "SharedLib"
     language "C++"
 	cppdialect "C++17"
 
-    files
-	{
+	warnings "Everything"
+
+    files {
 		"include/**.hpp",
+		"include/**.h",
 		"src/**.cpp",
+		"src/**.h",
+		"src/**.c"
     }
 
-	defines
-	{
+	defines {
 	}
 
-    includedirs
-	{
+    includedirs {
 		"include"
 	}
 
-    links
-    {
-
+    links {
     }
 
     flags { "NoPCH" }
-
-    filter "configurations:Debug"
-		defines "HZ_DEBUG"
-		runtime "Debug"
-		symbols "on"
-
-    filter "configurations:Release"
-		defines "RELEASE"
-		runtime "Release"
-		optimize "on"

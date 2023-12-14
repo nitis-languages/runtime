@@ -1,4 +1,10 @@
+.vs/
+
 *.sln
 *.vcxproj
 *.filters
+*.user
 Makefile
+
+.obj/
+.bin/
