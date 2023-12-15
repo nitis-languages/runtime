@@ -7,5 +7,5 @@ end_of_line = lf
 indent_style = tab
 
 [*.{h, hpp, c, cpp}]
-insert_final_newline = true
+insert_final_newline = false
 cpp_space_pointer_reference_alignment = right

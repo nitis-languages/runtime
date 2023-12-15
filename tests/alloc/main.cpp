@@ -7,5 +7,11 @@ u32 main()
 {
 	nlr_heap_init();
 	std::cout << "Version: " << nlr_get_version_string() << "\n";
+	
+	while (1)
+	{
+
+	}
+	
 	nlr_heap_terminate();
 }
