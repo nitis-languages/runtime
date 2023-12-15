@@ -1,3 +1,4 @@
+#if _WIN32
 #include <nlr_std.hpp>
 #include "../logging.h"
 #include <Windows.h>
@@ -33,4 +34,5 @@ nlr_api_impl void nlr_log_info(const char *const msg) {
 	__write_log("\n", 1);
 }
 
+#endif
 #endif

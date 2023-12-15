@@ -1,4 +1,5 @@
 #pragma once
+#include <nlr_std.hpp>
 
 typedef struct _NlrAlloca{
 	void *mem;
@@ -8,13 +9,14 @@ typedef struct _NlrAlloca{
 static NlrAlloca s_oHeap;
 static NlrAlloca s_eHeap;
 
-enum HeapAllocationGen {
-	NLR_HEAP_GEN_00	= 0,
-	NLR_HEAP_GEN_01	= 1,
-	NLR_HEAP_GEN_02	= 2,
-};
-
 void *nlr_alloc_exec(usize size);
 void *nlr_alloc_obj(usize size);
 void  nlr_alloc_pin(void *mem);
 void  nlr_alloc_unpin(void *mem);
+
+void *nlr_int_alloc(usize size);
+void  nlr_int_destroy(void *mem);
+
+#ifndef NLR_DISABLE_NEW_OVERRIDE
+
+#endif

@@ -9,6 +9,7 @@ project "nlr"
 		"include/**.hpp",
 		"include/**.h",
 		"src/**.cpp",
+		"src/**.hpp",
 		"src/**.h",
 		"src/**.c"
     }

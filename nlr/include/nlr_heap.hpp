@@ -3,7 +3,14 @@
 
 #define ERR_HEAP_OUT_OF_MEMORY 1
 
-nlr_api int nlr_heap_init();
+struct NlrHeapInitOptions
+{
+	usize begin_oheap_size;
+	usize begin_eheap_size;
+	usize limit_oheap_size;
+};
+
+nlr_api int nlr_heap_init(const NlrHeapInitOptions &options);
 nlr_api int nlr_heap_terminate();
 
 /// @brief Allocate not-executable memory
