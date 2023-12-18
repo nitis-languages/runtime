@@ -17,8 +17,9 @@ struct NlrLibHeader {
 	u8  reserved_01[3];
 
 	/* 0x10 - 0x1F */
-	u8 reserved_02[16];
-	
+	u64 nlr_required_features;
+	u8 reserved_02[8];
+
 	/* 0x20 - 0x2F */
 	u8 resered_03[12];
 	u32 entry_point_lid; // If 0, has no entry point
