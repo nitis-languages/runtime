@@ -7,8 +7,9 @@
 u32 main()
 {
 	NlrHeapInitOptions options{};
-	options.begin_oheap_size = 32768;
+
 	nlr_heap_init(options);
+	
 	std::cout << "Version: " << nlr_get_version_string() << "\n";
 	
 	library_rid lib_rid{};
@@ -21,10 +22,9 @@ u32 main()
 
 	std::cout << "Library rid: " << lib_rid;
 
-	while (1)
-	{
-
-	}
+	getchar();
 	
-	nlr_heap_terminate();
+	nlr_heap_terminate(); 
+	
+	getchar();
 }

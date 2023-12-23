@@ -35,8 +35,6 @@ enum NlrLibSegmentType : u8 {
 	ST_INALID_NONE = 0,
 
 	ST_STRING_UTF8  = 0x01,
-	ST_STRING_UTF16 = 0x02,
-	ST_STRING_UTF32 = 0x03,
 
 	ST_METHOD_TABLE = 0x10,
 	ST_TYPE_TABLE = 0x11,
