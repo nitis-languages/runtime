@@ -7,6 +7,7 @@
 #include <Windows.h>
 #include "../logging.h"
 #include <iostream>
+#include <vector>
 
 nlr_api_impl nlr_error_code nlr_stdcall nlr_lib_load(const char *const path, library_rid &retusa)
 {
@@ -53,6 +54,8 @@ nlr_api_impl nlr_error_code nlr_stdcall nlr_lib_load(const char *const path, lib
 		CloseHandle(file);
 		return NLR_UNSUITABLE_VERSION;
 	}
+
+
 
 	CloseHandle(file);
 	return NLR_SUCCESS;

@@ -24,7 +24,7 @@ u32 main()
 
 	getchar();
 	
-	nlr_heap_terminate(); 
+	nlr_heap_terminate();
 	
 	getchar();
 }

@@ -1,0 +1,6 @@
+argument:
+	(kw_local? kw_ref|kw_object)*
+	kw_local?
+	type
+	identifier
+

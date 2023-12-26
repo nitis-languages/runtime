@@ -40,3 +40,6 @@ typedef intptr_t	isize;
 	#define nlr_api __attribute__((visibility("default")))
 	#define nlr_api_impl __attribute__((visibility("default")))
 #endif
+
+#define nlr_nullable
+#define nlr_notnull(expr)

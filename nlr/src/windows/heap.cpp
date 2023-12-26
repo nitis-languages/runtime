@@ -22,7 +22,7 @@ nlr_api_impl int nlr_heap_init(const NlrHeapInitOptions &options)
 	if (nullptr == heap)
 	{
 		nlr_log_err((std::string("WinErr: ") + std::to_string(GetLastError())).c_str());
-		return ERR_HEAP_OUT_OF_MEMORY;
+		return NLR_HEAP_OUT_OF_MEMORY;
 	}
 
 	// Alloc executable heap
@@ -32,7 +32,7 @@ nlr_api_impl int nlr_heap_init(const NlrHeapInitOptions &options)
 	if (nullptr == exec_heap)
 	{
 		nlr_log_err((std::string("WinErr: ") + std::to_string(GetLastError())).c_str());
-		return ERR_HEAP_OUT_OF_MEMORY;
+		return NLR_HEAP_OUT_OF_MEMORY;
 	}
 
 	// Alloc big object heap
@@ -42,7 +42,7 @@ nlr_api_impl int nlr_heap_init(const NlrHeapInitOptions &options)
 	if (nullptr == big_obj_heap)
 	{
 		nlr_log_err((std::string("WinErr: ") + std::to_string(GetLastError())).c_str());
-		return ERR_HEAP_OUT_OF_MEMORY;
+		return NLR_HEAP_OUT_OF_MEMORY;
 	}
 
 	s_obj_heap.mem = heap;

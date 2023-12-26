@@ -22,7 +22,7 @@ enum NiTiSIntermediateBytecode : u8
 	_NiTiSByteCodeDefine(CONV_64, 0x0D, 0)		// conv.64		:nil:
 	_NiTiSByteCodeDefine(CONV_S, 0x0E, 0)		// conv.sign	:nil:
 	_NiTiSByteCodeDefine(CONV_U, 0x0F, 0)		// conv.unsign	:nil:
-	//_NiTiSByteCodeDefine(PUSH_THIS, 0x10, 0)	// push.this	:nil:
+	//_NiTiSByteCodeDefine(PUSH_THIS, 0x10, 0)	// push.this	:nil: (probably remove?)
 	_NiTiSByteCodeDefine(PUSH_ARG, 0x11, 0)		// push.arg		:nil:
 	_NiTiSByteCodeDefine(PUSH_LOCAL, 0x12, 0)	// push.loc		:nil:
 	_NiTiSByteCodeDefine(PUSH_FIELD, 0x13, 0)	// push.fld		:nil:
@@ -36,6 +36,9 @@ enum NiTiSIntermediateBytecode : u8
 	_NiTiSByteCodeDefine(IS_INST, 0x1A, 4)		// is_type		:lid32:
 	_NiTiSByteCodeDefine(POP, 0x1B, 0)			// pop			:nil:
 	_NiTiSByteCodeDefine(DUP, 0x1C, 0)			// dup			:nil:
+	_NiTiSByteCodeDefine(BOX, 0x1D, 0)			// box			:nil:
+	_NiTiSByteCodeDefine(UNBOX, 0x1E, 0)		// unbox		:nil:
+	_NiTiSByteCodeDefine(BOX_SHORT, 0x1F, 0)	// box.short	:nil:  (marks new object as low-shorted live)
 };
 #undef _NiTiSByteCodeDefine
 
